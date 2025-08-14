@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+@layer base {
+  html {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #395775; /* Your preferred darker font color */
+    background-color: #ffffff;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Remove default button styles */
+  button {
+    font-family: inherit;
+  }
+
+  /* Remove default input styles */
+  input {
+    font-family: inherit;
+  }
+}
+
+/* Custom component styles */
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors font-medium;
+  }
+  
+  .btn-secondary {
+    @apply bg-neutral-100 text-neutral-800 border border-neutral-200 px-3 py-1 rounded-full hover:bg-neutral-200 transition-colors font-medium;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-soft border border-neutral-200;
+  }
+  
+  .input-field {
+    @apply border border-neutral-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+}
+
+/* Custom utility styles */
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gradient-bg {
+    background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 50%, #f8fafc 100%);
+  }
+}
